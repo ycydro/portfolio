@@ -180,8 +180,6 @@
 @layer base {
   * {
     @apply border-border antialiased outline-ring/50;
-    transition-property: background-color, border-color, color, fill, stroke;
-    transition-duration: 200ms;
   }
 
   body {

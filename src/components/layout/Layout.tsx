@@ -6,7 +6,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <main className="animate mx-auto max-w-4xl min-w-0 fade-in">
+    <main className="duration-300ms mx-auto max-w-4xl min-w-0 transition-colors">
       {children}
     </main>
   )
