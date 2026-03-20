@@ -175,6 +175,18 @@
   --shadow-lg: var(--shadow-lg);
   --shadow-xl: var(--shadow-xl);
   --shadow-2xl: var(--shadow-2xl);
+
+  --animate-fade-up: fade-up 1.5s ease-in-out forwards;
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(250px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 
 @layer base {
