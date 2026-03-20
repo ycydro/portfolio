@@ -6,3 +6,7 @@ export interface AboutLink {
   icon: IconType
   link: string
 }
+export interface Technology {
+  icon?: IconType
+  name: string
+}
