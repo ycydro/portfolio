@@ -4,13 +4,13 @@ import type { IconType } from "@/types"
 type IconWithTextProps = {
   icon: IconType
   text: string
-  iconSize?: string
+  iconClassName?: string
   className?: string
 }
 
 const IconWithText = ({
   icon,
-  iconSize,
+  iconClassName,
   text,
   className,
 }: IconWithTextProps) => {
@@ -18,12 +18,12 @@ const IconWithText = ({
   return (
     <div
       className={cn(
-        "flex items-center gap-1 hover:underline md:gap-2",
+        "flex items-center justify-center gap-1 md:gap-2",
         className
       )}
     >
-      <Icon className={(cn("h-3 w-3 md:h-6 md:w-6"), iconSize)} />
-      <div className="text-sm font-light md:text-base">{text}</div>
+      <Icon className={(cn("h-3 w-3 md:h-6 md:w-6"), iconClassName)} />
+      <div className="text-sm font-light lowercase md:text-base">{text}</div>
     </div>
   )
 }
