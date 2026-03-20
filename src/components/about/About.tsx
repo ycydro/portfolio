@@ -5,9 +5,9 @@ import { aboutLinks } from "@/data/about-links"
 
 const About = () => {
   return (
-    <Container className="space-y-1">
+    <Container className="flex flex-col gap-2">
       <SectionHeading text="who am i?" />
-      <p className="text-md text-muted-foreground md:text-xl">
+      <p className="text-muted-foreground md:text-xl">
         yooo! i’m cyd. i like building stuff. i usually build using typescript,
         react, node, and express.
       </p>
