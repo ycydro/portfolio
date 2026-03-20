@@ -56,7 +56,7 @@ const Identity = () => {
             )}
           />
         </div>
-        <p className="font-mono text-lg font-extralight text-(--semi-muted) md:text-2xl">
+        <p className="text-md font-mono font-light text-(--semi-muted) md:text-2xl">
           software developer
         </p>
       </div>
