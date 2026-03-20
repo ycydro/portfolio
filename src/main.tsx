@@ -7,7 +7,7 @@ import { ThemeProvider } from "@/context/theme-provider.tsx"
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <ThemeProvider disableTransitionOnChange={false}>
+    <ThemeProvider disableTransitionOnChange={false} defaultTheme="dark">
       <App />
     </ThemeProvider>
   </StrictMode>
