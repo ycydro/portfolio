@@ -39,7 +39,7 @@ const Identity = () => {
     synth.speak(utterance)
   }
   return (
-    <div className="flex flex-1 gap-4">
+    <div className="flex gap-4">
       {/* Avatar  */}
       <div className="aspect-square min-w-20 bg-foreground md:min-w-35"></div>
       {/* Name and title  */}
