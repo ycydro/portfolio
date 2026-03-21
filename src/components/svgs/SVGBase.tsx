@@ -17,9 +17,9 @@ const SVGBase = ({
   return (
     <svg
       viewBox={viewBox}
-      fill={fill ? "currentColor" : "none"}
+      fill={fill ? undefined : "none"}
       xmlns="http://www.w3.org/2000/svg"
-      className={cn("h-6 w-6 text-primary", className)}
+      className={cn("h-6 w-6 fill-current text-primary", className)}
     >
       {children}
     </svg>
