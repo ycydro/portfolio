@@ -40,7 +40,7 @@ const ExpendableExperienceItem = ({
           <div className="flex flex-col justify-center gap-px md:gap-0.5">
             {/* Company name */}
             <div className="flex items-center gap-1">
-              <p className="text-md h-fit font-bold md:text-xl">
+              <p className="h-fit text-sm font-bold md:text-xl">
                 {experience.company}
               </p>
               <Button
@@ -64,7 +64,7 @@ const ExpendableExperienceItem = ({
         {/* Duration */}
         <div className="flex justify-center">
           <div className="flex flex-col items-end justify-center gap-px md:gap-0.5">
-            <p className="text-md h-fit font-bold md:text-xl">
+            <p className="h-fit text-sm font-bold md:text-xl">
               {experience.startDate} -{" "}
               {experience.isCurrentWork ? "Present" : experience.endDate}
             </p>
