@@ -36,7 +36,12 @@ const ExpendableExperienceItem = ({
         {/* Company and Job Title */}
         <div className="flex h-full justify-center gap-2">
           {/* Company Image */}
-          <div className="aspect-square min-w-10 rounded-2xl bg-foreground md:min-w-15"></div>
+          {experience.imagePath && (
+            <img
+              src={experience.imagePath}
+              className="aspect-square max-w-10 min-w-10 rounded-2xl md:max-w-15 md:min-w-15"
+            />
+          )}
           <div className="flex flex-col justify-center gap-px md:gap-0.5">
             {/* Company name */}
             <div className="flex items-center gap-1">

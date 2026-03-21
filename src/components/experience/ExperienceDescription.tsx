@@ -14,7 +14,7 @@ const ExperienceDescription = ({
           {description.map((item, index) => (
             <li
               key={index}
-              className="ml-4.5 list-disc text-sm leading-6 wrap-break-word whitespace-normal text-muted-foreground md:ml-4 md:text-lg md:leading-8 md:tracking-[0.035em]"
+              className="ml-5.25 list-disc text-sm leading-6 wrap-break-word whitespace-normal text-muted-foreground md:text-lg md:leading-8 md:tracking-[0.035em]"
             >
               {item}
             </li>
