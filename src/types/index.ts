@@ -12,11 +12,20 @@ export interface Technology {
 }
 export type Experience = {
   company: string
-  image?: string
+  imagePath?: string
   position: string
   startDate: string
   endDate?: string
   location: string
   isCurrentWork: boolean
   description?: string[]
+}
+
+export type Project = {
+  name: string
+  link?: string
+  imagePath?: string
+  githubLink?: string
+  description: string
+  technologiesUsed: Technology["name"][]
 }

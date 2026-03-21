@@ -13,50 +13,64 @@ import {
 } from "@/components/svgs/technologies"
 import type { Technology } from "@/types"
 
+export enum MyTechnologies {
+  JAVASCRIPT = "javascript",
+  TYPESCRIPT = "typescript",
+  TAILWINDCSS = "tailwindcss",
+  REACT = "react",
+  NODEJS = "node",
+  EXPRESS = "express",
+  SOCKETIO = "socket.io",
+  MYSQL = "mysql",
+  SUPABASE = "supabase",
+  GML = "gamemaker language",
+  GIT = "git",
+}
+
 export const techStack: Technology[] = [
   {
     icon: JavascriptIcon,
-    name: "javascript",
+    name: MyTechnologies.JAVASCRIPT,
   },
   {
     icon: TypescriptIcon,
-    name: "typescript",
+    name: MyTechnologies.TYPESCRIPT,
   },
 
   {
     icon: TailwindIcon,
-    name: "tailwindcss",
+    name: MyTechnologies.TAILWINDCSS,
   },
   {
     icon: ReactIcon,
-    name: "react",
+    name: MyTechnologies.REACT,
   },
   {
     icon: NodeIcon,
-    name: "node",
+    name: MyTechnologies.NODEJS,
   },
   {
     icon: ExpressIcon,
-    name: "express",
+    name: MyTechnologies.EXPRESS,
   },
   {
     icon: SocketIOIcon,
-    name: "socket.io",
+    name: MyTechnologies.SOCKETIO,
   },
   {
     icon: MySQLIcon,
-    name: "mysql",
+    name: MyTechnologies.MYSQL,
   },
   {
     icon: SupabaseIcon,
-    name: "supabase",
+    name: MyTechnologies.SUPABASE,
   },
   {
     icon: GMLIcon,
-    name: "gamemaker language",
+    name: MyTechnologies.GML,
   },
   {
     icon: GitIcon,
-    name: "git",
+    name: MyTechnologies.GIT,
   },
 ]
