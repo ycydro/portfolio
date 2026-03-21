@@ -2,6 +2,7 @@ import Layout from "@/components/layout/Layout"
 import Intro from "@/components/intro/Intro"
 import About from "@/components/about/About"
 import Skills from "./components/skills/Skills"
+import Experience from "./components/experience/Experience"
 
 export function App() {
   return (
@@ -9,6 +10,7 @@ export function App() {
       <Intro />
       <About />
       <Skills />
+      <Experience />
     </Layout>
   )
 }
