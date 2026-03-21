@@ -6,12 +6,12 @@ export const aboutLinks: AboutLink[] = [
   {
     name: "resume",
     icon: File,
-    link: "https://www.google.com/",
+    link: "/about/2026_RESUME_CYDCASTILLO.pdf",
   },
   {
     name: "linkedin",
     icon: LinkedInIcon,
-    link: "google.com",
+    link: "https://www.linkedin.com/in/castillocyd/",
   },
   {
     name: "github",
