@@ -22,7 +22,7 @@ const IconWithText = ({
         className
       )}
     >
-      <Icon className={(cn("h-3 w-3 md:h-6 md:w-6"), iconClassName)} />
+      <Icon className={(cn("size-3 md:size-6"), iconClassName)} />
       <div className="text-sm font-light lowercase md:text-base">{text}</div>
     </div>
   )
