@@ -90,7 +90,6 @@ const ExpendableExperienceItem = ({
       >
         <div ref={contentRef} className="w-full">
           <ExperienceDesciption description={experience.description} />
-          <div ref={descriptionBottomRef} className="pb-5" />
         </div>
       </div>
     </div>

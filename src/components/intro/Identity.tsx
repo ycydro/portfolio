@@ -43,7 +43,7 @@ const Identity = () => {
       {/* Avatar  */}
       <div className="aspect-square min-w-20 bg-foreground md:min-w-35"></div>
       {/* Name and title  */}
-      <div className="flex flex-col justify-center gap-0.5 md:gap-1.5">
+      <div className="flex w-full flex-col justify-center gap-0.5 md:gap-1.5">
         <div className="flex items-center gap-1 text-left md:gap-2">
           <p className="text-2xl font-bold md:text-4xl">cyd castillo</p>
           <Volume2Icon
