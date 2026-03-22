@@ -39,17 +39,19 @@ const Identity = () => {
     synth.speak(utterance)
   }
   return (
-    <div className="flex gap-4">
+    <div className="flex w-full justify-center gap-4 md:justify-normal">
       {/* Avatar  */}
       <div className="aspect-square min-w-20 bg-foreground md:min-w-35"></div>
       {/* Name and title  */}
-      <div className="flex w-full flex-col justify-center gap-0.5 md:gap-1.5">
-        <div className="flex items-center gap-1 text-left md:gap-2">
-          <p className="text-2xl font-bold md:text-4xl">cyd castillo</p>
+      <div className="flex flex-col justify-center gap-0.5 md:gap-1.5">
+        <div className="md:-w-fit flex w-full items-center gap-1 text-center md:gap-2 md:text-left">
+          <p className="w-full text-2xl font-bold md:w-fit md:text-4xl">
+            cyd castillo
+          </p>
           <Volume2Icon
             onClick={handleSpeak}
             className={cn(
-              "h-3.75 w-3.75 cursor-pointer hover:fill-foreground md:h-6 md:w-6",
+              "hidden h-3.75 w-3.75 cursor-pointer hover:fill-foreground md:block md:h-6 md:w-6",
               {
                 "fill-foreground": isSpeaking,
               }

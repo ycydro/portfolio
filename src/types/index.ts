@@ -29,3 +29,12 @@ export type Project = {
   description: string
   technologiesUsed: Technology["name"][]
 }
+
+export type Track = {
+  id: string
+  name: string
+  artist: string
+  album: string
+  albumImageUrl: string
+  spotifyUrl: string
+}

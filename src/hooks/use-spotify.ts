@@ -1,13 +1,5 @@
+import type { Track } from "@/types"
 import { useState, useEffect } from "react"
-
-interface Track {
-  id: string
-  name: string
-  artist: string
-  album: string
-  albumImageUrl: string
-  spotifyUrl: string
-}
 
 declare global {
   interface Window {
