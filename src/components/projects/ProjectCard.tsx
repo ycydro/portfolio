@@ -24,12 +24,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
             {project.name}
           </p>
           <div className="flex items-center justify-evenly gap-2">
-            {project.technologiesUsed?.map((technologyUsed, i) => {
+            {project.technologiesUsed?.map((technologyUsed) => {
               const techWithIcon = techStack.find(
                 (tech) => technologyUsed === tech.name
               )
               const Icon = techWithIcon?.icon || null
-              return <> {Icon && <Icon className="size-4.5 md:size-6" />}</>
+              return (
+                <div key={`${project.name}-${technologyUsed}`}>
+                  {" "}
+                  {Icon && <Icon className="size-4.5 md:size-6" />}
+                </div>
+              )
             })}
           </div>
         </div>

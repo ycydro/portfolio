@@ -10,7 +10,11 @@ const ExperienceList = ({ experiences }: ExperienceListProps) => {
       {experiences.map((experience, i) => {
         const latest = i === 0
         return (
-          <ExpendableExperienceItem experience={experience} latest={latest} />
+          <ExpendableExperienceItem
+            experience={experience}
+            key={experience.company}
+            latest={latest}
+          />
         )
       })}
     </div>
