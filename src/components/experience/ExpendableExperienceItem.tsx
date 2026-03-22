@@ -15,7 +15,6 @@ const ExpendableExperienceItem = ({
 }: ExpendableExperienceItemProps) => {
   const [isExpanded, setIsExpanded] = useState(latest)
   const [contentHeight, setContentHeight] = useState(0)
-  const descriptionBottomRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {

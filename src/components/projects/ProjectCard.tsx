@@ -31,7 +31,6 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
               const Icon = techWithIcon?.icon || null
               return (
                 <div key={`${project.name}-${technologyUsed}`}>
-                  {" "}
                   {Icon && <Icon className="size-4.5 md:size-6" />}
                 </div>
               )
