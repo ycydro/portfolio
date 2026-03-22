@@ -1,5 +1,3 @@
-import React from "react"
-
 type SpotifyMarqueeItemProps = {
   name?: string
   artist?: string
