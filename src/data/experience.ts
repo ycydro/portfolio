@@ -3,7 +3,7 @@ export const experiences: Experience[] = [
   {
     company: "ELI IT Solutions",
     position: "Software Developer Intern",
-    imagePath: "/experiences/ELI-NO-BG.png",
+    imagePath: "/experiences/ELI-COMPRESSED.png",
     location: "NCR, Philippines",
     startDate: "Jun 2025",
     endDate: "Nov 2025",
