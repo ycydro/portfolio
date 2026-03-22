@@ -44,7 +44,7 @@ const Identity = () => {
       <div className="aspect-square min-w-20 bg-foreground md:min-w-35"></div>
       {/* Name and title  */}
       <div className="flex flex-col justify-center gap-0.5 md:gap-1.5">
-        <div className="md:-w-fit flex w-full items-center gap-1 text-center md:gap-2 md:text-left">
+        <div className="md:-w-fit flex w-full items-center gap-1 text-left md:gap-2">
           <p className="w-full text-2xl font-bold md:w-fit md:text-4xl">
             cyd castillo
           </p>
