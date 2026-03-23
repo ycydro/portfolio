@@ -11,6 +11,7 @@ const TechStack = ({ technologies }: TechStackProps) => {
       {technologies.map((tech, i) => (
         <IconWithText
           key={i}
+          className="cursor-default"
           icon={tech.icon!}
           iconClassName="md:h-7.5 md:w-7.5"
           text={tech.name}
