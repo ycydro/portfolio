@@ -25,6 +25,7 @@ export type Project = {
   name: string
   link?: string
   imagePath?: string
+  gifPath?: string
   githubLink?: string
   description: string
   technologiesUsed: Technology["name"][]

@@ -33,6 +33,7 @@ export const projects: Project[] = [
   {
     name: "Mental Archives",
     imagePath: "/projects/ma.webp",
+    gifPath: "/projects/ma-gif.gif",
     link: "https://ycydro.itch.io/mental-archives",
     description: "a 2D horror-puzzle game",
     technologiesUsed: [MyTechnologies.GML],

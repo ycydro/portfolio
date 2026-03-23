@@ -3,17 +3,32 @@ import type { Project } from "@/types"
 import IconWithText from "../common/IconWithText"
 import { GithubIcon } from "../svgs/socials"
 import { ExternalLink } from "lucide-react"
+import { useState } from "react"
+import { useIsMobile } from "@/hooks/use-mobile"
 
 type ProjectCardProps = {
   project: Project
 }
 
 const ProjectCard = ({ project }: ProjectCardProps) => {
+  const [isHovering, setIsHovering] = useState(false)
+  const isMobile = useIsMobile()
+
+  const projectImagePath =
+    // default image path for mobile is gif (if exists)
+    (isMobile || isHovering) && project.gifPath
+      ? project.gifPath
+      : project.imagePath
+
   return (
-    <div className="flex max-w-full flex-col overflow-hidden rounded-2xl border-3 border-foreground md:min-h-50 md:flex-row">
+    <div
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
+      className="group hover:-translate flex max-w-full flex-col overflow-hidden rounded-2xl border-3 border-foreground transition-transform duration-300 md:min-h-50 md:flex-row"
+    >
       {/* Project Image  */}
       <img
-        src={project.imagePath}
+        src={projectImagePath}
         className="max-h-50 object-cover md:max-w-85 md:min-w-85"
       />
       {/* Project Info */}
