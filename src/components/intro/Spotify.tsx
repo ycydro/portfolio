@@ -4,6 +4,13 @@ import { cn } from "@/lib/utils"
 const Spotify = () => {
   const { currentTrack, mostRecentTrack, isLoading } = useSpotify()
 
+  const trackImage = currentTrack
+    ? currentTrack.albumImageUrl
+    : mostRecentTrack?.albumImageUrl
+  const trackName = currentTrack?.name ?? mostRecentTrack?.name ?? "No track"
+  const trackArtist =
+    currentTrack?.artist ?? mostRecentTrack?.artist ?? "No track artist"
+
   if (isLoading) {
     return (
       <div className="flex h-full flex-row items-center justify-center gap-3 md:mt-0 md:flex-col">
@@ -26,10 +33,6 @@ const Spotify = () => {
     )
   }
 
-  if (!currentTrack && !mostRecentTrack) {
-    return null
-  }
-
   return (
     <a
       target="_blank"
@@ -39,17 +42,21 @@ const Spotify = () => {
       className="flex h-full flex-row items-center justify-center gap-3 md:mt-0 md:flex-col"
     >
       <div className="relative aspect-square w-10 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.25)] ring-1 ring-foreground/10 md:w-25 dark:shadow-[0_0_30px_rgba(255,255,255,0.12)]">
-        <img
-          src={
-            currentTrack
-              ? currentTrack.albumImageUrl
-              : mostRecentTrack?.albumImageUrl
-          }
-          className={cn(
-            "absolute inset-0 aspect-square w-full scale-[0.5] rounded-full",
-            { "animate-vinyl-spin": currentTrack }
-          )}
-        />
+        {trackImage ? (
+          <img
+            src={trackImage}
+            className={cn(
+              "absolute inset-0 aspect-square w-full scale-[0.5] rounded-full",
+              { "animate-vinyl-spin": currentTrack }
+            )}
+          />
+        ) : (
+          <div
+            className={cn(
+              "absolute inset-0 aspect-square w-full min-w-10 scale-[0.5] rounded-full bg-foreground"
+            )}
+          ></div>
+        )}
         <img
           src="/spotify/vinyl.png"
           className={cn("absolute inset-0 aspect-square w-full rounded-full", {
@@ -65,12 +72,8 @@ const Spotify = () => {
           })}
         >
           <div className="flex w-full flex-col items-center font-light md:justify-center">
-            <p className="truncate text-sm">
-              {currentTrack ? currentTrack.name : mostRecentTrack?.name}
-            </p>
-            <p className="text-xs text-muted-foreground">
-              {currentTrack ? currentTrack.artist : mostRecentTrack?.artist}
-            </p>
+            <p className="truncate text-sm">{trackName}</p>
+            <p className="text-xs text-muted-foreground">{trackArtist}</p>
           </div>
         </div>
       </div>
