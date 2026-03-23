@@ -28,7 +28,7 @@ const IconWithText = ({
         className
       )}
     >
-      <Icon className={cn("size-3 md:size-6", iconClassName)} />
+      <Icon className={cn("size-5.5 md:size-6", iconClassName)} />
       <div className="text-sm font-light lowercase md:text-base">{text}</div>
     </div>
   )

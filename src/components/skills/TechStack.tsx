@@ -13,7 +13,7 @@ const TechStack = ({ technologies }: TechStackProps) => {
           key={i}
           className="cursor-default"
           icon={tech.icon!}
-          iconClassName="md:h-7.5 md:w-7.5"
+          iconClassName="md:size-7.5"
           text={tech.name}
           enableHoverEffects={true}
         />
