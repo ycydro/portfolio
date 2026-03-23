@@ -14,6 +14,7 @@ const TechStack = ({ technologies }: TechStackProps) => {
           icon={tech.icon!}
           iconClassName="md:h-7.5 md:w-7.5"
           text={tech.name}
+          enableHoverEffects={true}
         />
       ))}
     </div>

@@ -1,16 +1,19 @@
 import type { Experience } from "@/types"
+import type { MouseEventHandler } from "react"
 
 type ExperienceDescriptionProps = {
   description: Experience["description"]
+  onClick?: MouseEventHandler<HTMLUListElement>
 }
 
 const ExperienceDescription = ({
   description = undefined,
+  onClick,
 }: ExperienceDescriptionProps) => {
   return (
     <>
       {description && description.length > 0 && (
-        <ul>
+        <ul onClick={onClick}>
           {description.map((item, index) => (
             <li
               key={index}

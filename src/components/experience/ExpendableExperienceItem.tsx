@@ -1,6 +1,6 @@
 import type { Experience } from "@/types"
 import { ChevronDown, ChevronUp } from "lucide-react"
-import { useState, useRef, useEffect } from "react"
+import { useState } from "react"
 import { Button } from "../ui/button"
 import ExperienceDesciption from "./ExperienceDescription"
 
@@ -14,14 +14,6 @@ const ExpendableExperienceItem = ({
   latest,
 }: ExpendableExperienceItemProps) => {
   const [isExpanded, setIsExpanded] = useState(latest)
-  const [contentHeight, setContentHeight] = useState(0)
-  const contentRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    if (contentRef.current) {
-      setContentHeight(contentRef.current.scrollHeight)
-    }
-  }, [latest])
 
   const handleToggle = () => {
     const expanding = !isExpanded
@@ -29,9 +21,12 @@ const ExpendableExperienceItem = ({
   }
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex cursor-pointer flex-col gap-2">
       {/* Experience Info */}
-      <div className="flex w-full justify-between gap-2">
+      <div
+        className="flex w-full justify-between gap-2 transition-transform duration-150 ease-in-out hover:scale-[1.01] md:px-1"
+        onClick={handleToggle}
+      >
         {/* Company and Job Title */}
         <div className="flex h-full justify-center gap-2">
           {/* Company Image */}
@@ -82,14 +77,15 @@ const ExpendableExperienceItem = ({
       {/* Expandable section */}
       <div
         style={{
-          maxHeight: isExpanded ? `${contentHeight}px` : "0px",
+          maxHeight: isExpanded ? "1200px" : "0px",
           opacity: isExpanded ? 1 : 0,
         }}
         className="w-full overflow-hidden transition-all duration-400 ease-in-out"
       >
-        <div ref={contentRef} className="w-full">
-          <ExperienceDesciption description={experience.description} />
-        </div>
+        <ExperienceDesciption
+          // onClick={handleToggle}
+          description={experience.description}
+        />
       </div>
     </div>
   )

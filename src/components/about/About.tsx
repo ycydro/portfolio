@@ -12,11 +12,20 @@ const About = () => {
         react, node, and express.
       </p>
       <div className="flex gap-3 py-1.5 md:py-3">
-        {aboutLinks.map((link, i) => {
+        {aboutLinks.map((link) => {
           const Icon = link.icon
           return (
-            <a key={i} href={link.link} target="_blank">
-              <IconWithText icon={Icon} text={link.name} />
+            <a
+              key={link.link}
+              href={link.link}
+              target="_blank"
+              className="underline-offset-3 hover:underline"
+            >
+              <IconWithText
+                icon={Icon}
+                text={link.name}
+                enableHoverEffects={true}
+              />
             </a>
           )
         })}
