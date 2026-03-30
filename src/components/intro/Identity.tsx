@@ -39,9 +39,13 @@ const Identity = () => {
     synth.speak(utterance)
   }
   return (
-    <div className="flex w-full justify-center gap-4 md:justify-normal">
+    <div className="flex w-full justify-center gap-1.5 md:justify-normal">
       {/* Avatar  */}
-      <div className="aspect-square min-w-20 bg-foreground md:min-w-35"></div>
+      <img
+        src="/avatar.png"
+        alt=""
+        className="transition-[transform, shadow] animate-infinite-tilt size-20 object-contain duration-250 hover:scale-125 md:size-37 md:hover:paused dark:drop-shadow-[0_0_30px_rgba(255,255,255,0.075)] dark:hover:drop-shadow-none"
+      />
       {/* Name and title  */}
       <div className="flex flex-col justify-center gap-0.5 md:gap-1.5">
         <div className="md:-w-fit flex w-full items-center gap-1 text-left md:gap-2">
