@@ -6,7 +6,7 @@ export const aboutLinks: AboutLink[] = [
   {
     name: "resume",
     icon: File,
-    link: "/about/2026_RESUME_CYDCASTILLO.pdf",
+    link: "/about/CASTILLO_CYD_RESUME_2026.pdf",
   },
   {
     name: "linkedin",
