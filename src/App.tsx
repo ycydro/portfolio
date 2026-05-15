@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import Layout from "@/components/layout/Layout"
 import Intro from "@/components/intro/Intro"
 import About from "@/components/about/About"
@@ -15,6 +16,7 @@ export function App() {
       <Experience />
       <Projects />
       <Footer />
+      <Analytics />
     </Layout>
   )
 }
