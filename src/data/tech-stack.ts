@@ -2,6 +2,7 @@ import {
   ExpressIcon,
   GitIcon,
   GMLIcon,
+  GSAPIcon,
   JavascriptIcon,
   MySQLIcon,
   NodeIcon,
@@ -17,6 +18,7 @@ export enum MyTechnologies {
   JAVASCRIPT = "javascript",
   TYPESCRIPT = "typescript",
   TAILWINDCSS = "tailwindcss",
+  GSAP = "gsap",
   REACT = "react",
   NODEJS = "node",
   EXPRESS = "express",
@@ -40,6 +42,10 @@ export const techStack: Technology[] = [
   {
     icon: TailwindIcon,
     name: MyTechnologies.TAILWINDCSS,
+  },
+  {
+    icon: GSAPIcon,
+    name: MyTechnologies.GSAP,
   },
   {
     icon: ReactIcon,

@@ -9,3 +9,4 @@ export { default as SocketIOIcon } from "@/components/svgs/technologies/socket-i
 export { default as SupabaseIcon } from "@/components/svgs/technologies/supabase"
 export { default as TailwindIcon } from "@/components/svgs/technologies/tailwind"
 export { default as TypescriptIcon } from "@/components/svgs/technologies/typescript"
+export { default as GSAPIcon } from "@/components/svgs/technologies/gsap"
