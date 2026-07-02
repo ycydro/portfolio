@@ -1,6 +1,16 @@
 import type { Experience } from "@/types"
 export const experiences: Experience[] = [
   {
+    company: "Sportsyear",
+    position: "Junior Software Engineer",
+    imagePath: "/experiences/SPORTSYEAR.webp",
+    location: "",
+    startDate: "Jun 2026",
+    endDate: "",
+    isCurrentWork: true,
+    description: [],
+  },
+  {
     company: "ELI IT Solutions",
     position: "Software Developer Intern",
     imagePath: "/experiences/ELI-COMPRESSED.png",

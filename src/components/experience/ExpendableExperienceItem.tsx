@@ -42,18 +42,21 @@ const ExpendableExperienceItem = ({
               <p className="h-fit text-sm font-bold md:text-xl">
                 {experience.company}
               </p>
-              <Button
-                onClick={handleToggle}
-                variant="ghost"
-                size="icon"
-                className="h-6 w-6 transition-transform duration-150 hover:bg-neutral-300 dark:hover:bg-neutral-800"
-              >
-                {!isExpanded ? (
-                  <ChevronDown className="size-4" />
-                ) : (
-                  <ChevronUp className="size-4" />
-                )}
-              </Button>
+
+              {Boolean(experience.description?.length) && (
+                <Button
+                  onClick={handleToggle}
+                  variant="ghost"
+                  size="icon"
+                  className="h-6 w-6 transition-transform duration-150 hover:bg-neutral-300 dark:hover:bg-neutral-800"
+                >
+                  {!isExpanded ? (
+                    <ChevronDown className="size-4" />
+                  ) : (
+                    <ChevronUp className="size-4" />
+                  )}
+                </Button>
+              )}
             </div>
             <p className="h-fit text-xs font-light md:text-base">
               {experience.position}
@@ -68,7 +71,7 @@ const ExpendableExperienceItem = ({
               {experience.isCurrentWork ? "Present" : experience.endDate}
             </p>
             <p className="h-fit text-xs font-light md:text-base">
-              {experience.location}
+              {experience.location || ""}
             </p>
           </div>
         </div>
