@@ -7,7 +7,7 @@ type TechStackProps = {
 
 const TechStack = ({ technologies }: TechStackProps) => {
   return (
-    <div className="flex max-w-200 flex-wrap gap-4 py-1.5 md:justify-center md:gap-x-6 md:gap-y-7 md:py-3">
+    <div className="flex max-w-200 flex-wrap justify-evenly gap-4 py-1.5 md:justify-center md:gap-x-6 md:gap-y-7">
       {technologies.map((tech, i) => (
         <IconWithText
           key={i}

@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Container className="flex flex-col gap-2">
       <SectionHeading text="who am i?" />
-      <p className="text-muted-foreground md:text-xl">
+      <p className="text-lg text-muted-foreground md:text-xl">
         yooo! i’m cyd. i like building stuff. i usually build using typescript,
         react, node, and express.
       </p>

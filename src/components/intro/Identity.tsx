@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils"
 import { Volume2Icon } from "lucide-react"
 import { useEffect, useState } from "react"
+import Spotify from "./Spotify"
 
 const Identity = () => {
   const [voice, setVoice] = useState<SpeechSynthesisVoice | undefined>(
@@ -39,33 +40,36 @@ const Identity = () => {
     synth.speak(utterance)
   }
   return (
-    <div className="flex w-full justify-center gap-1.5 md:justify-normal">
+    <div className="flex w-full justify-center gap-1 md:justify-normal">
       {/* Avatar  */}
-      <img
-        src="/avatar.png"
-        alt=""
-        className="transition-[transform, shadow] animate-infinite-tilt size-20 object-contain duration-250 hover:scale-125 md:size-37 md:hover:paused dark:drop-shadow-[0_0_30px_rgba(255,255,255,0.075)] dark:hover:drop-shadow-none"
-      />
-      {/* Name and title  */}
-      <div className="flex flex-col justify-center gap-0.5 md:gap-1.5">
-        <div className="md:-w-fit flex w-full items-center gap-1 text-left md:gap-2">
-          <p className="w-full text-2xl font-bold md:w-fit md:text-4xl">
-            cyd castillo
+      <div className="flex w-full gap-1.5">
+        <img
+          src="/avatar.png"
+          alt=""
+          className="transition-[transform, shadow] size-20 animate-infinite-tilt object-contain duration-250 hover:scale-125 md:size-37 md:hover:paused dark:drop-shadow-[0_0_30px_rgba(255,255,255,0.075)] dark:hover:drop-shadow-none"
+        />
+        {/* Name and title  */}
+        <div className="flex flex-col justify-center gap-0.5 md:gap-1.5">
+          <div className="md:-w-fit flex w-full items-center gap-1 text-left md:gap-2">
+            <p className="w-full text-2xl font-bold md:w-fit md:text-4xl">
+              cyd castillo
+            </p>
+            <Volume2Icon
+              onClick={handleSpeak}
+              className={cn(
+                "hidden h-3.75 w-3.75 cursor-pointer hover:fill-foreground md:block md:h-6 md:w-6",
+                {
+                  "fill-foreground": isSpeaking,
+                }
+              )}
+            />
+          </div>
+          <p className="text-md font-mono font-light text-(--semi-muted) md:text-2xl">
+            software developer
           </p>
-          <Volume2Icon
-            onClick={handleSpeak}
-            className={cn(
-              "hidden h-3.75 w-3.75 cursor-pointer hover:fill-foreground md:block md:h-6 md:w-6",
-              {
-                "fill-foreground": isSpeaking,
-              }
-            )}
-          />
         </div>
-        <p className="text-md font-mono font-light text-(--semi-muted) md:text-2xl">
-          software developer
-        </p>
       </div>
+      <Spotify />
     </div>
   )
 }

@@ -15,7 +15,7 @@ const Spotify = () => {
 
   if (isLoading) {
     return (
-      <div className="flex h-full flex-row items-center justify-center gap-3 md:mt-0 md:flex-col">
+      <div className="flex min-h-full flex-col items-center justify-center gap-3 md:mt-0">
         {/* Spinning spotify shit */}
         <div className="relative aspect-square w-10 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.25)] ring-1 ring-foreground/10 md:w-25 dark:shadow-[0_0_30px_rgba(255,255,255,0.12)]">
           <img
@@ -39,7 +39,7 @@ const Spotify = () => {
     <a
       target="_blank"
       href={trackUrl}
-      className="group flex h-full transform cursor-pointer flex-row items-center justify-center gap-3 transition-transform duration-200 hover:scale-105 md:mt-0 md:flex-col"
+      className="group l flex min-h-full transform cursor-pointer flex-col items-center justify-center gap-3 transition-transform duration-200 hover:scale-105 md:mt-0"
     >
       <div className="relative aspect-square w-10 rounded-full shadow-[0_0_20px_rgba(0,0,0,0.25)] ring-1 ring-foreground/10 md:w-25 dark:shadow-[0_0_30px_rgba(255,255,255,0.12)]">
         {trackImage ? (
@@ -74,8 +74,10 @@ const Spotify = () => {
           )}
         >
           <div className="flex w-full flex-col items-center font-light md:justify-center">
-            <p className="truncate text-sm">{trackName}</p>
-            <p className="text-xs text-muted-foreground">{trackArtist}</p>
+            <p className="truncate text-xs md:text-sm">{trackName}</p>
+            <p className="hidden text-xs text-muted-foreground md:block">
+              {trackArtist}
+            </p>
           </div>
         </div>
       </div>
