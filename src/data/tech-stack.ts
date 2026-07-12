@@ -25,7 +25,7 @@ export enum MyTechnologies {
   SOCKETIO = "socket.io",
   MYSQL = "mysql",
   SUPABASE = "supabase",
-  GML = "gamemaker language",
+  GML = "gml",
   GIT = "git",
 }
 
